@@ -1,0 +1,16 @@
+:root {  
+    --text-color: blue;  
+    --line-height: 1.6;  
+    --letter-spacing: 3px;  
+    --h1-size: 40px;
+}
+
+body {  
+    color: var(--text-color);  
+    line-height: var(--line-height);
+}
+
+h1 {  font-size: var(--h1-size);  
+      letter-spacing: var(--letter-spacing);
+    
+}
