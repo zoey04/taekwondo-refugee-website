@@ -1,4 +1,8 @@
+
+/* Schrift */
 @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Lato:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 
 
 * {
@@ -8,17 +12,57 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: inter;
     color: white;
     color: var(--text-color);  
     line-height: var(--line-height);
 }
 
-:root {  
-    --text-color: black;  
-    --line-height: 1.6;  
+:root { 
+    /* Farben */
+    --color-red: #C1002A;
+    --color-blue: #6374A2;
+    --color-black: #000000;
+    --color-body-gray: #646464;
+    --color-subtle-gray: #A0A0A5;
+    --color-border-gray: #CCCCCC;
+    --color-section-bg: #F0F0F7;
+    --color-placeholder: #D9D9D9;
+    --color-white:#FFFFFF;
+
+    /* Schriftgrössen */
+    --font-size-xs: 0.75rem;    
+    --font-size-s: 0.875rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+
+    --line-height: 1.6;
     --letter-spacing: 3px;  
     --h1-size: 40px;
+
+    /* Schriftstärken */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Abstände */
+    --space-xs: 0.75rem;
+    --space-s: 1.125rem;
+    --space-m: 1.5rem;
+    --space-l: 2.25rem;
+    --space-xl: 3rem;
+    --space-xxl: 7.875rem;
+
+    /* Layout */
+    --page-widht: 90rem;
+    --conten-width: 74.25rem;
+    --grid-columns: 12;
+    --grid-column-width: 4.8125rem;
+    --grid-gutter: 1.5rem;
+    --section-padding: 3rem;
 }
 
 
@@ -26,6 +70,28 @@ body {
 h1 {  font-size: var(--h1-size);  
       letter-spacing: var(--letter-spacing);
     
+}
+
+h3 {
+
+}
+
+/* Untertitel */
+h4 {
+    color: #C1002A;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: italic;
+}
+
+.section-titel-thin{
+    font-weight: var(--font-weight-normal);
+
 }
 
 /* Header */
