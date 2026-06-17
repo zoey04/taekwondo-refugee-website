@@ -31,11 +31,12 @@ body {
     --color-white:#FFFFFF;
 
     /* Schriftgrössen */
+    --font-size-2px: 0.125rem;
     --font-size-xs: 0.75rem;    
-    --font-size-s: 0.875rem;
-    --font-size-m: 1rem;
+    --font-size-14px: 0.875rem;
+    --font-size-16px: 1rem;
     --font-size-20px: 1.25rem;
-    --font-size-l: 1.5rem;
+    --font-size-24px: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 3.75rem;
     --font-size-42px: 2.625rem;
@@ -64,6 +65,9 @@ body {
     --grid-column-width: 4.8125rem;
     --grid-gutter: 1.5rem;
     --section-padding: 3rem;
+
+    /* Typografie */
+    --line-height: 1.5;
 }
 
 
@@ -91,8 +95,14 @@ h4 {
 
 
 h6 {
-    font-size: 1rem;
-    font-weight: italic;
+    font-size: var(--font-size-16px);
+    font-style: italic;
+}
+
+
+p {
+     font-size: var(--font-size-16px);
+
 }
 
 .section-titel-thin{
@@ -140,6 +150,124 @@ nav {
 }
 
 
+/* button */
+.hero-button {
+
+    display: flex;
+    flex-direction: row;       
+    align-items: center;
+    gap: 0.75rem; 
+    
+    padding: 1.125rem 1.5rem;
+    border-radius: 0.25rem; 
+    border: none;
+
+    
+
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-size: var(--font-size-16px);
+    font-weight: var(--font-weight-semibold);
+
+}
+
+/* Ausgangslage */
+.section-situation {
+    background-color: var(--color-section-bg);
+    padding: var(--section-padding) var(--grid-gutter);
+    max-width: var(--conten-width);
+    margin: 0 auto;
+}
+
+.section-label {
+    
+    padding-top: var(--space-xs);
+    border-top: var(--font-size-2px) solid var(--color-red);
+    display: inline-block;
+    margin: 0 0 var(--space-xs);
+}
+
+ .section-subtitle {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    color: var(--color-black);
+    margin: 0 0 var(--space-m);
+ }
+
+.section-text {
+    line-height: var(--line-height);
+    color: var(--color-body-gray);
+    margin: 0;
+}
 
 
+/* Initiert getragen von */
 
+.section-partners {
+    background-color: var(--color-red);
+    padding: var(--space-xxl) var(--space-xl);
+}
+
+.section-partners .section-label {
+    border-top-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.section-partners .section-title {
+    color: var(--color-white);
+}
+
+.partner-list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-m);
+    margin-top: var(--space-l);
+}
+
+.partner-card {
+    background-color: var(--color-subtle-gray);
+    border-radius: 0.5rem;
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-m);
+    flex: 1;
+}
+
+.partner-card__logo {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.partner-card__divider {
+    width: 0.0625rem;
+    height: 5rem;
+    background-color: var(--color-white);
+    flex-shrink: 0;
+}
+
+.partner-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.partner-card__info  .section-text {
+    font-size: var(--font-size-14px);
+    color: var(--color-subtle-gray);
+}
+
+.partner-card__info h5 {
+    font-size: var(--font-size-24px);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white)
+}
+
+.partner-card__info p {
+    font-size: var(--font-size-14px);
+    color: var(--color-subtle-gray);
+    line-height: var(--line-heigh);
+}
