@@ -15,7 +15,6 @@ body {
     font-family: inter;
     color: white;
     color: var(--text-color);  
-    line-height: var(--line-height);
 }
 
 :root { 
@@ -31,11 +30,15 @@ body {
     --color-white:#FFFFFF;
 
     /* Schriftgrössen */
+    --font-size-1px: 0.0625rem;
     --font-size-2px: 0.125rem;
-    --font-size-xs: 0.75rem;    
+    --font-size-xs: 0.75rem;  
+    --font-size-12px: 0.75rem;
+    --font-size-13px: 0.8125rem;  
     --font-size-14px: 0.875rem;
     --font-size-16px: 1rem;
     --font-size-20px: 1.25rem;
+    --font-size-22px: 1.375rem;
     --font-size-24px: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 3.75rem;
@@ -71,62 +74,93 @@ body {
 }
 
 
-/* Titel */
-h1 {  font-size: var(--font-size-xxl);
-      font-weight: var(--font-weight-very-bold);
-    
-}
 
-
-h2 {
-    font-size: var(--font-size-m);
-    font-weight: var(--font-weight-bold);
-}
-h3 {
-    font-size: var(--font-size-42px);
-}
 
 /* Untertitel */
-h4 {
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-red);
-}
+
 
 
 h6 {
-    font-size: var(--font-size-16px);
+    font-size: var(--font-size-13px);
     font-style: italic;
 }
 
 
 p {
-     font-size: var(--font-size-16px);
+     font-size: var(--font-size-12px);
 
 }
 
-.section-titel-thin{
-    font-weight: var(--font-weight-normal);
+ul {
+    font-size: var(--font-size-12px);
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 87.5vh;
+    overflow: hidden;
+}
+
+.hero-image{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
 
 }
 
+.hero-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100%;
+    align-items: center;
+    padding-top: var(--space-xs);
+    color: var(--color-white);
+    text-align: center;
+    
+}
+
+.hero-subtitle{
+     padding-top: var(--space-xs);
+     border-top: var(--font-size-1px) solid var(--color-white);
+     font-size: var(--font-size-12px);
+     font-weight: var(--font-weight-bold);
+
+
+}
+.hero-titel{
+    font-size: var(--font-size-24px);
+    font-weight: var(--font-weight-very-bold);
+    
+}
 
 .hero-text{
-    font-size: var(--font-size-20px);
+    font-size: var(--font-size-12px);
     font-weight: var(--font-weight-normal);
+    margin: 0;
+    margin-top: var(--space-s);
+
+    
+}
+
+.hero-content h1 {
+    margin: 0;
+    margin-top: var(--space-s);
 }
 
 
 /* Header */
-header {
+.header {
     background: white;
-    height: 135px;
+    height: 80px;
     display: flex;
     align-items: center;
     padding: 0 35px;
 }
 
-nav {
+.nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -152,26 +186,22 @@ nav {
 
 /* button */
 .hero-button {
-
-    display: flex;
-    flex-direction: row;       
-    align-items: center;
-    gap: 0.75rem; 
     
     padding: 1.125rem 1.5rem;
     border-radius: 0.25rem; 
     border: none;
 
-    
-
     background-color: var(--color-red);
     color: var(--color-white);
     font-size: var(--font-size-16px);
     font-weight: var(--font-weight-semibold);
+    margin: 0;
+    margin-top: var(--space-s);
+    margin-bottom: var(--space-xl);
 
 }
 
-/* Ausgangslage */
+/* sections */
 .section {
     background-color: var(--color-section-bg);
     padding: var(--section-padding) var(--grid-gutter);
@@ -179,12 +209,34 @@ nav {
     margin: 0 auto;
 }
 
+.section-white{
+    background-color: var(--color-white);
+    padding: var(--section-padding) var(--grid-gutter);
+    max-width: var(--conten-width);
+    margin: 0 auto;
+}
+
+.section-red {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: var(--section-padding) var(--grid-gutter);
+    max-width: var(--conten-width);
+    margin: 0 auto;
+}
 .section-label {
     
     padding-top: var(--space-xs);
-    border-top: var(--font-size-2px) solid var(--color-red);
+    border-top: var(--font-size-1px) solid var(--color-red);
     display: inline-block;
     margin: 0 0 var(--space-xs);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-red);
+}
+
+.section-label-white{
+    color: var(--color-white);
+    border-top: var(--font-size-1px) solid var(--color-white);
 }
 
  .section-subtitle {
@@ -192,15 +244,77 @@ nav {
     line-height: var(--line-height);
     color: var(--color-black);
     margin: 0 0 var(--space-m);
+    
  }
+
+ .section-subtitle-white {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height);
+    color: var(--color-white);
+    margin: 0 0 var(--space-s);
+ }
+
+ .section-title {
+    font-size: var(--font-size-22px);
+    margin: 0 0 var(--space-m);
+    padding-top: var(--space-m);
+}
+
+.section-titel-thin{
+    font-weight: var(--font-weight-normal);
+
+}
 
 .section-text {
     line-height: var(--line-height);
     color: var(--color-body-gray);
     margin: 0;
+    padding-bottom: var(--space-m);
 }
 
+.section-text-white {
+    line-height: var(--line-height);
+    color: var(--color-white);
+    margin: 0;
 
+}
+
+.section-card-title {
+    font-weight: var(--font-weight-bold);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-s);
+}
+
+.section-card{
+    padding: var(--space-m);
+    border-top: var(--font-size-2px) solid var(--color-red);
+    background-color: var(--color-section-bg);
+
+}
+
+.section-card-white {
+    padding: var(--space-m);
+    border-top: var(--font-size-2px) solid var(--color-red);
+    background-color: var(--color-white);
+    
+}
+
+.section-card-red {
+    padding: var(--space-m);
+    background-color: var(--color-black 20%) ;
+    
+}
+
+.section-card-text {
+    font-weight: var(--font-weight-bold);
+    padding-top: var(--space-m);
+}
+
+.section-card-text-italic {
+    font-weight: var(--font-weight-bold);
+    padding-top: var(--space-m);
+    font-style: italic;
+}
 /* Initiert getragen von */
 
 .section-partners {
@@ -219,7 +333,7 @@ nav {
 
 .partner-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--space-m);
     margin-top: var(--space-l);
 }
@@ -270,4 +384,15 @@ nav {
     font-size: var(--font-size-14px);
     color: var(--color-subtle-gray);
     line-height: var(--line-heigh);
+}
+
+@media (min-width: 744px) and (max-width: 1279px) {
+
+}
+
+@media (min-width: 1280px) {
+    .section {
+        display: grid;
+
+    }
 }
