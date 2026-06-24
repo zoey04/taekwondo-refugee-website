@@ -3,22 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Lato:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: inter;
-    color: white;
-    color: var(--text-color);  
-    line-height: var(--line-height);
-}
-
 :root { 
+    /* Schriftatr */
+    --font-family:'Inter', Arial, sans-serif;
+
     /* Farben */
     --color-red: #C1002A;
     --color-blue: #6374A2;
@@ -32,14 +20,14 @@ body {
 
     /* Schriftgrössen */
     --font-size-2px: 0.125rem;
-    --font-size-xs: 0.75rem;    
+    --font-size-12px: 0.75rem;    
     --font-size-14px: 0.875rem;
     --font-size-16px: 1rem;
     --font-size-20px: 1.25rem;
     --font-size-24px: 1.5rem;
-    --font-size-xl: 2rem;
-    --font-size-xxl: 3.75rem;
+    --font-size-32px: 2rem;
     --font-size-42px: 2.625rem;
+    --font-size-60pxl: 3.75rem;
 
 
     /* Schriftstärken */
@@ -69,6 +57,87 @@ body {
     /* Typografie */
     --line-height: 1.5;
 }
+
+/* Überschriften und Texte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-black);
+    line-height: var(--line-height);
+    background-color: var(--color-white);
+}
+
+a {
+    color: inherit; text-decoration: none;
+}
+
+
+img {
+    max-width: 100%; display: block;
+}
+
+.wrapper {
+    width: min(calc(100% - 3rem), var(--conten-width));
+    margin-inline: auto;
+}
+
+/* header */
+.header {
+    height: 5.5rem;
+    background-color: var(--color-white);
+    display: flex; 
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* nav */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+}
+
+/* Logo */
+.logo img {
+    width: 7.2rem;
+}
+
+
+/* navigation */
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: var(--space-m);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+}
+
+.navigation a {
+    color: var(--color-black);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    font-size: var(font);
+}
+
+
 
 
 /* Titel */
@@ -105,6 +174,8 @@ p {
 
 }
 
+
+
 .section-titel-thin{
     font-weight: var(--font-weight-normal);
 
@@ -117,21 +188,6 @@ p {
 }
 
 
-/* Header */
-header {
-    background: white;
-    height: 135px;
-    display: flex;
-    align-items: center;
-    padding: 0 35px;
-}
-
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .logo img{
     width: 95px;
