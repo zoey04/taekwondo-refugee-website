@@ -17,6 +17,11 @@ body {
     color: var(--text-color);  
 }
 
+img {
+    max-width: 100;
+    height: auto;
+}
+
 :root { 
     /* Farben */
     --color-red: #C1002A;
@@ -60,6 +65,7 @@ body {
     --space-l: 2.25rem;
     --space-xl: 3rem;
     --space-xxl: 7.875rem;
+    --space-xxxl: 9rem:
 
     /* Layout */
     --page-widht: 90rem;
@@ -101,6 +107,20 @@ ul {
     overflow: hidden;
 }
 
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0)
+    );
+}
+
 .hero-image{
     width: 100%;
     position: absolute;
@@ -119,6 +139,7 @@ ul {
     padding-top: var(--space-xs);
     color: var(--color-white);
     text-align: center;
+    z-index: 1;
     
 }
 
@@ -157,7 +178,7 @@ ul {
     height: 80px;
     display: flex;
     align-items: center;
-    padding: 0 35px;
+    padding: 0 1rem;
 }
 
 .nav {
@@ -213,7 +234,7 @@ ul {
     font-weight: var(--font-weight-semibold);
     margin: 0;
     margin-top: var(--space-s);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-s);
 
 }
 
@@ -221,23 +242,17 @@ ul {
 .section {
     background-color: var(--color-section-bg);
     padding: var(--section-padding) var(--grid-gutter);
-    max-width: var(--conten-width);
-    margin: 0 auto;
 }
 
 .section-white{
     background-color: var(--color-white);
     padding: var(--section-padding) var(--grid-gutter);
-    max-width: var(--conten-width);
-    margin: 0 auto;
 }
 
 .section-red {
     background-color: var(--color-red);
     color: var(--color-white);
     padding: var(--section-padding) var(--grid-gutter);
-    max-width: var(--conten-width);
-    margin: 0 auto;
 }
 .section-label {
     
@@ -364,20 +379,35 @@ ul {
 
 .section-card-white {
     padding: var(--space-m);
-    border-top: var(--font-size-2px) solid var(--color-red);
     background-color: var(--color-white);
-    
+    border-top: var(--font-size-2px) solid var(--color-red);
+    margin-bottom: var(--space-l);
+}
+
+.section-card-image {
+    width: 100%;
+    height: var(--space-xxl);
+    background-color: var(--color-placeholder);
+    border-top: var(--font-size-2px) solid var(--color-red);
 }
 
 .section-card-red {
+    margin-bottom: var(--space-m);
+    margin-top: var(--space-m);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-bottom: var(--space-m);
     padding: var(--space-m);
-    background-color: var(--color-black 20%) ;
-    
 }
 
 .section-card-text {
     font-weight: var(--font-weight-bold);
     padding-top: var(--space-m);
+}
+
+.section-card-red-title {
+    font-size: var(--font-size-13px);
+    font-weight: var(--font-weight-bold);
+    padding-bottom: var(--space-xs);
 }
 
 .section-card-text-italic {
@@ -401,6 +431,12 @@ ul {
     color: var(--color-white);
 }
 
+.section-text-ch {
+    font-size: var(--font-size-12px);
+    color: var(--color-white);
+
+}
+
 .partner-list {
     display: flex;
     flex-direction: column;
@@ -409,9 +445,9 @@ ul {
 }
 
 .partner-card {
-    background-color: var(--color-subtle-gray);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
-    padding: var(--space-m);
+    padding: var(--space-xs);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -437,6 +473,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
+    flex: 1;
 }
 
 .partner-card__info  .section-text {
@@ -445,24 +482,161 @@ ul {
 }
 
 .partner-card__info h5 {
-    font-size: var(--font-size-24px);
+    font-size: var(--font-size-20px);
     font-weight: var(--font-weight-bold);
     color: var(--color-white)
 }
 
 .partner-card__info p {
     font-size: var(--font-size-14px);
-    color: var(--color-subtle-gray);
-    line-height: var(--line-heigh);
+    color: var(--color-white);
+    line-height: var(--line-height);
 }
 
+
+.icons {
+    display: flex;
+    float: row;
+    justify-content: center;
+    gap: var(--space-s);
+    padding: var(--space-s);
+    font-size:var(--font-size-42px);
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: var(--space-s);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.25rem;
+
+    color: var(--color-white);
+    font-size: var(--font-size-16px);
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-s);
+    
+}
+
+.checkbox-row input {
+    width: 1rem;
+    height: 1rem;
+    
+}
+
+.contact-section {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: var(--space-m);
+}
+
+.contact-logo-box {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    text-align: center;
+    padding: var(--space-m);
+    margin-bottom: var(--space-m);
+    border-radius: 0.25rem;
+}
+
+.contact-logo-box img {
+    width: 10rem;
+}
+
+.contact-logo-box p {
+    border-top: 1px solid var(--color-border-gray);
+    padding-top: var(--space-xs);
+    margin-top: var(--space-xs);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: var(--space-xs);
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: var(--space-xs);
+    border-radius: 0.25rem;
+    border: none;
+    font-size: var(--font-size-14px);
+}
+
+.contact-form textarea {
+    height: 16rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.form-check input {
+    width: 1rem;
+    height: 1rem;
+}
+
+.contact-button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    padding: var(--space-xs) var(--space-m);
+    margin-top: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+    border-radius: 0.25rem;
+    width: fit-content;
+}
+
+.contact-footer {
+    margin-top: var(--space-xl);
+    color: var(--color-border-gray);
+}
+
+.contact-footer hr {
+    margin: var(--space-xs) 0;
+}
+
+
+
 @media (min-width: 744px) and (max-width: 1279px) {
+    .header {
+        padding: 0 2rem;
+    }
 
 }
 
 @media (min-width: 1280px) {
     .section {
         display: grid;
-
+        max-width: var(--conten-width);
+        margin: 0 auto;
+        display: grid;
     }
+
+    .section-white {
+        max-width: var(--conten-width);
+        margin: 0 auto;
+    }
+
+    .section-red {
+        max-width: var(--conten-width);
+        margin: 0 auto;
+    }
+
 }
