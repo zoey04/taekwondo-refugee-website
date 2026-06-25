@@ -613,11 +613,28 @@ ul {
 }
 
 
-
+/* tablet */
 @media (min-width: 744px) and (max-width: 1279px) {
     .header {
         padding: 0 2rem;
     }
+
+    .navigation{
+        display: flex;
+        flex-direction: row;
+       
+    }
+
+    .menu-button{
+        display: none;
+    }
+
+    .language .global-icon.png{
+        align-self: flex-start;
+    }
+
+
+
 
 }
 
