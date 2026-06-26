@@ -28,7 +28,7 @@
             <!-- Sprachauswahl und Hamburger-Menü -->
                 <div class="nav-right">
                     <span class="language">Deutsch</span>
-                    <img class="globe-icon.png" src="Assets/image.png" alt="Sprache wählen">
+                    <img class="globe-icon" src="Assets/image.png" alt="Sprache wählen">
                     <button class="menu-button" type="button" aria-label="Menü öffnen">☰</button>
                 </div>
 
@@ -58,8 +58,8 @@
                                           Performance <br>
                                           Team
                     </h1>
-                    <p class="hero-text">Chancen durch Sport. Würde durch <br>
-                                         Ein Team, das Grenzen <br>
+                    <p class="hero-text">Chancen durch Sport. Würde durch <br class="mobile-break">
+                                         Ein Team, das Grenzen <br class="mobile-break">
                                          überwindet.</p>
                     <button class="button" href="#">Team unterstützen</button>
                 </div>
@@ -69,11 +69,13 @@
             <section class="section">
                 <div>
                     <h4 class="section-label">AUSGANGSLAGE</h4>
-                    <h3 class="section-title">Starke Athlet:innen. <br>
-                        <span class="section-titel-thin">
+                    <div class="section-title-div">
+                        <h3 class="section-title">Starke Athlet:innen. <br>
+                            <span class="section-titel-thin">
                             Schwache Strukturen.
-                        </span>
-                    </h3>
+                            </span>
+                        </h3>
+                    </div>
                 </div>
                 <div>
                     <h6 class="section-subtitle">Swiss Taekwondo fördert zahlreiche internationale Spitzensportler:innen, darunter Flüchtlinge, Menschen mit Migrationshintergrund, die entscheidend zum Leistungsniveau des nationalen Trainingsbetriebs beitragen. Für sie fehlt bisher eine klare Unterstützungsstruktur.</h6>
@@ -144,32 +146,35 @@
                     Sei der Unterschied.</h3>
                 <h6 class="section-subtitle-white">Das UHP Team braucht Unterstützung – sportlich, finanziell und menschlich. Melde dich für unseren Newsletter an und sei Teil der Lösung.</h6>
                 <p class="section-text-white">Das United High Performance Team ist ein lebendiges Projekt, und es lebt von Menschen, die hinter seiner Idee stehen. Ob als Sponsor, Partner, Unterstützer oder einfach als Interessierter: Deine Stimme und dein Engagement zählen. Melde dich für unseren Newsletter an und erfahre als Erster, wie das UHP Team wächst.</p>
-                <div class="section-card-red">
-                    <p class="section-card-red-title">Weitersagen</p>
-                    <p class="section-card-red-text">Teile das Projekt in deinem Netzwerk. Jede Stimme hilft, das UHP Team bekannter zu machen</p>
-                    <div class="icons">
-                         <i class="fa-brands fa-instagram"></i>
-                         <i class="fa-brands fa-facebook"></i>
+                <div class="engagement-grid">
+                    <div class="section-card-red">
+                        <p class="section-card-red-title">Weitersagen</p>
+                        <p class="section-card-red-text">Teile das Projekt in deinem Netzwerk. Jede Stimme hilft, das UHP Team bekannter zu machen</p>
+                        <div class="icons">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="section-card-red">
-                    <p class="section-card-red-title">Partner & Sponsoren werden</p>
-                    <p class="section-card-red-text">Das UHP Team sucht engagierte Unternehmen, Stiftungen und Einzelpersonen, die seinen Aufbau aktiv mitgestalten.</p>
                     
-                    <button class="button-white" href="#">Mail an das UHP Team</button>
-                    <p class="section-card-red-text">Nimm mit uns Kontakt auf. Wir freuen uns über Interesse.</p>
-                </div>
-                <div class="section-card-red">
-                    <p class="section-card-red-title">Newsletter abonnieren</p>
-                    <p class="section-card-red-text">Erhalte Updates über Athleten, Projekte, Erfolge und Finanzierungsinitiativen direkt in dein Postfach.</p>
-                    <input type="email" placeholder="Ihre E-Mail-Adresse" class="Newsletter-input"> 
-                    <button class="button-white" href="#">Anmelden</button>
-                <div class="checkbox-row">
-                    <input type="checkbox">
-                    <p>Ich stimme dem Datenschutz zu*</p>
-                </div>
-                    
+                    <div class="section-card-red">
+                        <p class="section-card-red-title">Partner & Sponsoren werden</p>
+                        <p class="section-card-red-text">Das UHP Team sucht engagierte Unternehmen, Stiftungen und Einzelpersonen, die seinen Aufbau aktiv mitgestalten.</p>
+                        
+                        <button class="button-white" href="#">Mail an das UHP Team</button>
+                        <p class="section-card-red-text">Nimm mit uns Kontakt auf. Wir freuen uns über Interesse.</p>
+                    </div>
+                    <div class="section-card-red newsletter-card">
+                        <p class="section-card-red-title">Newsletter abonnieren</p>
+                        <p class="section-card-red-text">Erhalte Updates über Athleten, Projekte, Erfolge und Finanzierungsinitiativen direkt in dein Postfach.</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Ihre E-Mail-Adresse" class="Newsletter-input"> 
+                            <button class="button-white" href="#">Anmelden</button>
+                                <div class="checkbox-row">
+                                    <input type="checkbox">
+                                    <p>Ich stimme dem Datenschutz zu*</p>
+                                </div>
+                        </div>
+                    </div>
                 </div>
                 
             </section>
@@ -189,29 +194,37 @@
                 <div class="section-card-white">
                     <p>Das UHP Team gibt Athlet:innen das, was Spitzenathlet:innen brauchen: einen Rahmen, der ihnen erlaubt, sich auf das Wesentliche zu konzentrieren: die Leistung.</p>
                 </div>
-                <div class="section-card-image"></div>
-                <div class="section-label-team-white">
-                    <h4 class="section-label-team"> 
-                    <span>TE</span>AM
-                    </h4>
-                    <h6 class="section-undertitle">bis 58 kg · 2005 | Afghanistan</h6>
-                    <p class="section-undertext">«Auf der Matte zählt nur, wer du bist – nicht, woher du kommst.»</p>
-                </div>
-                <div class="section-card-image"></div>
-                <div class="section-label-team-white">
-                    <h4 class="section-label-team"> 
-                    <span>TE</span>AM
-                    </h4>
-                    <h6 class="section-undertitle">bis 58 kg · 2005 | Afghanistan</h6>
-                    <p class="section-undertext">«Auf der Matte zählt nur, wer du bist – nicht, woher du kommst.»</p>
-                </div>
-                 <div class="section-card-image"></div>
-                <div class="section-label-team-white">
-                    <h4 class="section-label-team"> 
-                    <span>TE</span>AM
-                    </h4>
-                    <h6 class="section-undertitle">bis 58 kg · 2005 | Afghanistan</h6>
-                    <p class="section-undertext">«Auf der Matte zählt nur, wer du bist – nicht, woher du kommst.»</p>
+                <div class="athlete-grid">
+                    <div class="athlete-card">
+                    <div class="section-card-image"></div>
+                        <div class="section-label-team-white">
+                            <h4 class="section-label-team"> 
+                            <span>TEAM</span>
+                            </h4>
+                            <h6 class="section-undertitle">bis 58 kg · 2005 | Afghanistan</h6>
+                            <p class="section-undertext">«Auf der Matte zählt nur, wer du bist – nicht, woher du kommst.»</p>
+                        </div>
+                    </div>
+                    <div class="athlete-card">
+                        <div class="section-card-image"></div>
+                        <div class="section-label-team-white">
+                            <h4 class="section-label-team"> 
+                            <span>TEAM</span>
+                            </h4>
+                            <h6 class="section-undertitle">bis 58 kg · 2005 | Afghanistan</h6>
+                            <p class="section-undertext">«Auf der Matte zählt nur, wer du bist – nicht, woher du kommst.»</p>
+                        </div>
+                    </div>
+                    <div class="athlete-card">
+                        <div class="section-card-image"></div>
+                        <div class="section-label-team-white">
+                            <h4 class="section-label-team"> 
+                            <span>TEAM</span>
+                            </h4>
+                            <h6 class="section-undertitle">bis 58 kg · 2005 | Afghanistan</h6>
+                            <p class="section-undertext">«Auf der Matte zählt nur, wer du bist – nicht, woher du kommst.»</p>
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -234,40 +247,45 @@
             <section class="section-red">
                 <h4 class="section-label section-label-white">INITIIERT & GETRAGEN VON</h4>
                 <h3 class="section-title">Unsere Partner & Träger</h3>
-                
-                <div class="partner-list">
-                    <div class="partner-card">
-                        <a href="#"><img src="Assets/TaekwondoBern Kopie.png" alt="Teakwondo Bern Logo" class="partner-card__logo">
-                        </a>
-                        <div class="partner-card__divider"></div>
-                        <div class="partner-card__info">
-                            <p class="section-text-ch">taekwondobern.ch</p>
-                            <h5>Leistungszentrum Bern</h5>
-                            <p>Initiator & Leistungszentrum Taekwondo Schweiz</p>
+                <div class="athlete-grid">
+                    <div class="athlete-card">
+                        <div class="partner-list">
+                            <div class="partner-card">
+                                <a href="#"><img src="Assets/TaekwondoBern Kopie.png" alt="Teakwondo Bern Logo" class="partner-card__logo">
+                                </a>
+                                <div class="partner-card__divider"></div>
+                                <div class="partner-card__info">
+                                    <p class="section-text-ch">taekwondobern.ch</p>
+                                    <h5>Leistungszentrum Bern</h5>
+                                    <p>Initiator & Leistungszentrum Taekwondo Schweiz</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="athlete-card">
+                            <div class="partner-card">
+                                <a href="#"><img src="Assets/cmdf-logo-white.svg" alt="Coubertin meets Dunant Foundation Logo" class="partner-card__logo">
+                                </a>
+                                <div class="partner-card__divider"></div>
+                                <div class="partner-card__info">
+                                    <p class="section-text-ch">coubertin-meets-Dunant.ch</p>
+                                    <h5>Coubertin meets Dunant</h5>
+                                    <p>Partner & Stiftung im Bereich der Sportförderung</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="athlete-card">
+                            <div class="partner-card">
+                                <a href="#"><img src="Assets/Swiss Taekwondo.png" alt="Swiss Taekwondo" class="partner-card__logo">
+                                </a>
+                                <div class="partner-card__divider"></div>
+                                <div class="partner-card__info">
+                                    <p class="section-text-ch">taekwondo.ch</p>
+                                    <h5>Swiss Taekwondo</h5>
+                                    <p>Träger & Nationaler Verband</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="partner-card">
-                        <a href="#"><img src="Assets/cmdf-logo-white.svg" alt="Coubertin meets Dunant Foundation Logo" class="partner-card__logo">
-                        </a>
-                        <div class="partner-card__divider"></div>
-                        <div class="partner-card__info">
-                            <p class="section-text-ch">coubertin-meets-Dunant.ch</p>
-                            <h5>Coubertin meets Dunant</h5>
-                            <p>Partner & Stiftung im Bereich der Sportförderung</p>
-                        </div>
-                    </div>
-
-                     <div class="partner-card">
-                        <a href="#"><img src="Assets/Swiss Taekwondo.png" alt="Swiss Taekwondo" class="partner-card__logo">
-                        </a>
-                        <div class="partner-card__divider"></div>
-                        <div class="partner-card__info">
-                            <p class="section-text-ch">taekwondo.ch</p>
-                            <h5>Swiss Taekwondo</h5>
-                            <p>Träger & Nationaler Verband</p>
-                        </div>
-                     </div>
                 </div>
             
                 

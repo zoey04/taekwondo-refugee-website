@@ -41,6 +41,7 @@ img {
     --font-size-12px: 0.75rem;
     --font-size-13px: 0.8125rem;  
     --font-size-14px: 0.875rem;
+    --font-size-15px: 0.9375rem;
     --font-size-16px: 1rem;
     --font-size-20px: 1.25rem;
     --font-size-22px: 1.375rem;
@@ -65,7 +66,7 @@ img {
     --space-l: 2.25rem;
     --space-xl: 3rem;
     --space-xxl: 7.875rem;
-    --space-xxxl: 9rem:
+    --space-xxxl: 9rem:;
 
     /* Layout */
     --page-widht: 90rem;
@@ -161,11 +162,12 @@ ul {
     font-size: var(--font-size-12px);
     font-weight: var(--font-weight-normal);
     margin: 0;
-    margin-top: var(--space-s);
-
-    
+    margin-top: var(--space-s); 
 }
 
+.mobie-break {
+    display: inline;
+}
 .hero-content h1 {
     margin: 0;
     margin-top: var(--space-s);
@@ -291,7 +293,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 80%; 
+    width: 32.5%; 
     height: 1px;
     background-color: var(--color-red);
 }
@@ -319,7 +321,7 @@ ul {
 
  .section-undertitle {
     display: block;
-    margin-top: var(--space-xs);
+    margin-left: var(--space-xs);
     color: var(--color-body-gray);
     font-weight: var(--font-weight-normal);
     font-style: normal;
@@ -622,17 +624,99 @@ ul {
     .navigation{
         display: flex;
         flex-direction: row;
-       
+        gap: var(--space-m);
+        list-style: none;  
+    }
+
+    .navigation a{
+        text-decoration: none;
+        color: var(--color-black);
+        font-size: var(--font-size-12px);
+        font-weight: var(--font-weight-normal);
+    }
+
+    .navigation a:visited {
+        color: var(--color-black);
+    }
+
+    .navigation a:hover {
+        color: var(--color-black);
     }
 
     .menu-button{
         display: none;
     }
 
-    .language .global-icon.png{
-        align-self: flex-start;
+   .nav {
+        display: flex;
+        align-items: center;
+   }
+
+   .logo {
+        order:1;
+   }
+
+   .navigation-ipad {
+        order: 2;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+   }
+
+   .nav-right {
+        order: 3;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--font-size-12px);
     }
 
+    .global-icon {
+        width: 12px;
+        height: auto;
+    }
+
+    .hero-title {
+        max-width: 650px;
+    }
+
+    .mobie-break {
+        display: none;
+    }
+
+    .section-title-div {
+        font-size: var(--font-size-42px);
+    }
+
+    .engagement-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-m);
+    }
+
+    .newsletter-card {
+        grid-column: 1 / 3;
+        width: 100%;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+
+    .athlete-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-m);
+    }
+
+    .athlete-card {
+        width: 100%;
+    }
+
+   
 
 
 
