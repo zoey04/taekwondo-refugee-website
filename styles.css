@@ -716,8 +716,57 @@ ul {
         width: 100%;
     }
 
+    .contact-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-m);
+    }
 
+    .contact-logo-box {
+        grid-column: 1 / 2;
+    }
 
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;        
+        gap: var(--space-m);
+        align-items: start;
+    }
+
+    .firstname {
+        grid-column: 1;
+    }
+
+    .lastname {
+        grid-column: 1;
+    }
+
+    .organisation {
+        grid-column: 1;
+    }
+
+    .email {
+        grid-column: 1;
+    }
+
+    .message {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+    }
+
+    .form-check {
+        grid-column: 1;
+    }
+
+    .contact-button {
+        grid-column: 2;
+        justify-self: end;
+        align-self: end;
+    }
+
+    .contact-footer {
+        grid-column: 1 / -1;
+    }
    
 
 
