@@ -606,7 +606,7 @@ ul {
 }
 
 .contact-footer {
-    margin-top: var(--space-xl);
+    grid-column: 1 /-1;
     color: var(--color-border-gray);
 }
 
@@ -716,6 +716,8 @@ ul {
         width: 100%;
     }
 
+
+
    
 
 
@@ -724,11 +726,20 @@ ul {
 
 @media (min-width: 1280px) {
     .section {
-        display: grid;
+        background-color: var(--color-section-bg);
+     }
+
+     .section > div {
         max-width: var(--conten-width);
         margin: 0 auto;
+     }
+
+     .contact-section {
         display: grid;
-    }
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+     }
+    
 
     .section-white {
         max-width: var(--conten-width);
@@ -738,6 +749,14 @@ ul {
     .section-red {
         max-width: var(--conten-width);
         margin: 0 auto;
+    }
+
+    .contact-footer {
+        grid-column: 1 / -1;
+    }
+
+    .athlete-grid {
+        grid-template-columns: repeat(3,1fr);
     }
 
 }
